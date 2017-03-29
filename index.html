@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <script src="tonejs/Tone.min.js"></script>
+  <script src="tonejs/Tone.js"></script>
   <title>Main Menu</title>
   <style>
     
@@ -43,10 +45,16 @@
   <button id="playButton">Play!</button>
   
   <script>
+    var ping = new Tone.Player("");
+    var startup = new Tone.Player("monkey1.mp3");
+    ping.connect(Tone.Master);
+    startup.connect(Tone.Master);
+    startup.start();
     var button1 = document.getElementById("playButton");
         button1.addEventListener("click", buttonActions);
         function buttonActions(event){
-                window.location.href="question1.html";
+          ping.start();      
+          window.location.href="question1.html";
             }
   </script>
 </body>
