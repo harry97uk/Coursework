@@ -46,7 +46,8 @@
   
   <script>
     
-    var startup = new Tone.Player("monkey1.mp3");
+    var buffer = new Tone.Buffer("monkey1.mp3");
+    var startup = new Tone.Player("buffer");
     
     startup.connect(Tone.Master);
     startup.start();
