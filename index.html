@@ -45,15 +45,15 @@
   <button id="playButton">Play!</button>
   
   <script>
-    var ping = new Tone.Player("");
+    
     var startup = new Tone.Player("monkey1.mp3");
-    ping.connect(Tone.Master);
+    
     startup.connect(Tone.Master);
     startup.start();
     var button1 = document.getElementById("playButton");
         button1.addEventListener("click", buttonActions);
         function buttonActions(event){
-          ping.start();      
+                
           window.location.href="question1.html";
             }
   </script>
